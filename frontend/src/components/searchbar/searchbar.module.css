@@ -1,0 +1,23 @@
+.header {
+	background-color: black;
+	padding: 1.5rem;
+	
+}
+.inputWrapper{
+	display: flex;
+	justify-content: flex-end
+}
+.form{
+	width:50%;
+	display: flex;
+}
+
+.input {
+	padding: 0.5rem 1rem;
+	outline: none;
+	width: 100%;
+}
+.button{
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+}
