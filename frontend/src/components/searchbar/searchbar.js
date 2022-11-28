@@ -27,6 +27,9 @@ export default function SearchBar({ setComp3Data }) {
 
                     setData(response.data);
                 }
+                else {
+                    setData([]);
+                }
             }, 2000)
 
             return () => clearTimeout(getData);
@@ -46,8 +49,8 @@ export default function SearchBar({ setComp3Data }) {
             <header className={styles.header}>
                 <div className={styles.inputWrapper}>
                     <form className={styles.form}>
-                        <input className={styles.input} onChange={(e) => setSearch(e.target.value.trim())} value={search} type="text" />
-                        <button className={styles.button}>Search</button>
+                        <input className={styles.input} onChange={(e) => setSearch(e.target.value)} value={search} type="text" placeholder="Search a brand name or product ..." />
+                        <button type="button" className={styles.button}>Search</button>
                     </form>
                     {/* show suggestions */}
                     {
