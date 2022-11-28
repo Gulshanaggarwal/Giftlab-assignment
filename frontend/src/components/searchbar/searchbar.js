@@ -22,7 +22,6 @@ export default function SearchBar({ setComp3Data }) {
             const getData = setTimeout(async () => {
 
                 const response = await handleFetch(url);
-                console.log(response);
                 if (!response.error) {
 
                     setData(response.data);
