@@ -11,7 +11,7 @@ app.use(connectDB);
 app.use('/api', routes);
 
 app.use("*", (req, res) => {
-    res.status(404).json({ message: "404 not found!" });
+    res.status(404).json({ error: true, message: "404 not found!" });
 });
 
 app.listen(PORT, () => console.log('server is running'));
