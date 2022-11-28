@@ -1,14 +1,14 @@
 .header {
 	background-color: black;
 	padding: 1.5rem;
-	
 }
-.inputWrapper{
+.inputWrapper {
 	display: flex;
-	justify-content: flex-end
+	justify-content: flex-end;
+	position: relative;
 }
-.form{
-	width:50%;
+.form {
+	width: 50%;
 	display: flex;
 }
 
@@ -17,7 +17,40 @@
 	outline: none;
 	width: 100%;
 }
-.button{
+.button {
 	padding: 0.5rem 1rem;
 	cursor: pointer;
+}
+
+.itemWrapper {
+	background-color: grey;
+	border-radius: 10px;
+	list-style-type: none;
+	position: absolute;
+	top: 20px;
+	padding: 0;
+	max-height: 200px;
+	overflow-y: scroll;
+	width: 50%;
+	z-index: 100;
+}
+.item {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	border-radius: 5px;
+	margin: 1rem 0.5rem;
+	color: white;
+}
+.item:hover {
+	cursor: pointer;
+	background: white;
+	color: black;
+}
+
+.note {
+	color: red;
+	font: bold;
+	padding: 3rem;
+	font-size: 1.5rem;
 }

@@ -8,6 +8,7 @@ export default function Carousel({ images }) {
     const [currImg, setCurrImg] = useState(0);
 
 
+
     const handleDecrement = () => {
         if (currImg === 0) {
             setCurrImg(images.length - 1);
@@ -27,11 +28,11 @@ export default function Carousel({ images }) {
     return (
         <div className={styles.container}>
             <div>
-
+                <img src={images[currImg]} className={styles.img} />
             </div>
-            <div>
-                <button onClick={handleDecrement}>&lt;</button>
-                <button onClick={handleIncrement}>&gt;</button>
+            <div className={styles.buttonsWrapper}>
+                <button className={styles.decButton} onClick={handleDecrement}>&lt;</button>
+                <button className={styles.incButton} onClick={handleIncrement}>&gt;</button>
             </div>
         </div>
     )
